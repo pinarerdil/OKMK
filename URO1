@@ -1,0 +1,56 @@
+URO1 
+Options()
+ {
+  Resolution=1;
+ };
+ Plot()
+ {
+  Outlier_Model("General",T(5),U(0,4),"t");
+  Sequence("Beam FK-001-01 Sequence")
+  {
+   Boundary("Start");
+   R_Date("GrM-22715",3538,19)
+   {
+    Outlier(0.05);
+   };
+   R_Date("GrM-22714",3547,19)
+   {
+    Outlier(0.05);
+   };
+   R_Date("GrM-22713",3544,19)
+   {
+    Outlier(0.05);
+   };
+   R_Date("GrM-22710",3553,19)
+   {
+    Outlier(0.05);
+   };
+   R_Combine("PNR F", 8)
+   {
+    Outlier(0.05);
+    R_Date("GrM-22708",3568,19);
+    R_Date("GrM-22709",3570,19);
+   };
+   R_Date("GrM-22707",3533,19)
+   {
+    Outlier(0.05);
+   };
+   R_Date("GrM-22706",3532,19)
+   {
+    Outlier(0.05);
+   };
+   R_Date("GrM-22705",3532,19)
+   {
+    Outlier(0.05);
+   };
+   R_Date("GrM-22703",3540,19)
+   {
+    Outlier(0.05);
+   };
+   R_Date("Bark Edge 1 GrM22702",3509,19)
+   {
+    Outlier(0.05);
+   };
+   Boundary("End");
+  };
+ };
