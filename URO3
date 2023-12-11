@@ -1,0 +1,141 @@
+Options()
+ {
+  Resolution=1;
+ };
+ Plot()
+ {
+  Outlier_Model("General",T(5),U(0,4),"t");
+  Delta_R("Seasonal Effect",12,5);
+  Sequence("Uronartı FI and FA")
+  {
+   Boundary("Uronarti Foundation");
+   Phase("Founding phase")
+   {
+    //FA-027-6and7
+    R_Date("GrM-30065", 3527, 24 )
+    {
+     Outlier("General", 0.05);
+    };
+    //FA-027-6
+    R_Date("GrM-20337", 3559, 26)
+    {
+     Outlier("General",0.05);
+    };
+    //FA-001-2
+    R_Date("GrM-20338", 3559, 26)
+    {
+     Outlier("General",0.05);
+    };
+    //FJ-001-7
+    R_Date("GrM-30033", 3642, 40 )
+    {
+     Outlier("General", 0.05);
+    };
+    //FK-002-2
+    R_Date("GrM-30069", 3553, 24 )
+    {
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("Start FA P2a");
+   Phase("FA Phase 2a")
+   {
+    //FA-042-10B
+    R_Date("GrM-30066", 3528, 23 )
+    {
+     Outlier("General", 0.05);
+    };
+    //FA-042-10
+    R_Date("GrM-20336", 3551, 26)
+    {
+     Outlier("General",0.05);
+    };
+   };
+   Boundary("FA P2a/P2b");
+   Phase("FA Phase 2b")
+   {
+    //FA-033-8
+    R_Date("GrM-30031", 3640, 40 )
+    {
+     Outlier("General", 0.05);
+    };
+    //FA-032-7
+    R_Date("GrM-20335", 3566, 26)
+    {
+     Outlier("General",0.05);
+    };
+    //FA-031-4
+    R_Date("GrM-30032", 3695, 40 )
+    {
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("FA P2b/P3b");
+   Phase("FA Phase 3b")
+   {
+    //FA-035-5
+    R_Date("GrM-30068", 3610, 27 )
+    {
+     Outlier("General", 0.05);
+    };
+    //FA-035-1
+    R_Date("GrM-21296", 3570, 75)
+    {
+     Outlier("General",0.05);
+    };
+   };
+   Boundary("End FA P3b");
+   Boundary("Start FI L7u");
+   Phase("FI Lot 7 upper")
+   {
+    R_Combine("FI-001-92 duplicates",8)
+    {
+     R_Date("GrM-30071",3542,24);
+     R_Date("GrM-30094",3557,26);
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("FI L7u/L6");
+   Phase("FI Lot 6")
+   {
+    //FI-001-91B
+    R_Date("GrM-30072", 3543, 24)
+    {
+     Outlier("General", 0.05);
+    };
+    //FI-001-91A
+    R_Date("GrM-30093",3535,24)
+    {
+     Outlier("General",0.05);
+    };
+   };
+   Boundary("FI L6/L5u");
+   Phase("FI Lot 5 upper")
+   {
+    //FI-001-90
+    R_Date("GrM-30070", 3541, 24 )
+    {
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("FI L5u/L4u");
+   Phase("FI Lot 4 upper")
+   {
+    //FI-001-88
+    R_Date("GrM-30073", 3462, 24 )
+    {
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("FI L4u/L2u");
+   Phase("FI Lot 2 upper")
+   {
+    //FI-001-86B
+    R_Date("GrM-30067", 3494, 24 )
+    {
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("End FI L2u");
+  };
+ };
