@@ -1,0 +1,546 @@
+Options()
+ {
+  Resolution=1;
+  kIterations=100;
+ };
+ Plot()
+ {
+  Outlier_Model("General",T(5),U(0,4),"t");
+  Delta_R("Seasonal Effect",12,5);
+  Sequence("Extra Dates 1 Kkmy or Dsr")
+  {
+   Boundary("=Khasekhemwy");
+   Phase("Kkmy or Dsr")
+   {
+    R_Date("17850", 4084, 32)
+    {
+     Outlier(0.05);
+    };
+    R_Date("18500", 4177, 28)
+    {
+     Outlier(0.05);
+    };
+    R_Date("18053", 4108, 30)
+    {
+     Outlier(0.05);
+    };
+    R_Date("18406", 4135, 30)
+    {
+     Outlier(0.05);
+    };
+    R_Date("18957", 4145, 32)
+    {
+     Outlier(0.05);
+    };
+    R_Date("19005", 4168, 27)
+    {
+     Outlier(0.05);
+    };
+   };
+   Boundary("=Sekhemkhet");
+  };
+  Sequence("Extra Dates 2 5th-6th Dynasties")
+  {
+   Boundary("=Userkaf");
+   Phase("5th-6th Dynasties Phase")
+   {
+    R_Date("OxA-30209", 3915, 29)
+    {
+     Outlier( 0.05);
+    };
+    R_Date("OxA-32270", 3815, 38)
+    {
+     Outlier(0.05);
+    };
+    R_Date("OxA-32271", 3899, 37)
+    {
+     Outlier(0.05);
+    };
+   };
+   Boundary("=Start 1IP");
+  };
+  Sequence("Extra Dates 8 6th Dynasty")
+  {
+   Boundary("=Teti");
+   Phase("6th Dynasty")
+   {
+    R_Date("OxA-30874", 3918, 33)
+    {
+     Outlier(0.05);
+    };
+    R_Date("OxA-30875", 3871, 33)
+    {
+     Outlier(0.05);
+    };
+    R_Date("OxA-30876", 3910, 32)
+    {
+     Outlier(0.05);
+    };
+   };
+   Boundary("=Start 1IP");
+  };
+  Sequence("Extra Dates 3 3rd/4th Dynasty Boundary")
+  {
+   Boundary("=Sekhemkhet");
+   Phase("3rd/4th Dynasty Boundary")
+   {
+    R_Date("19542", 3954, 27)
+    {
+     Outlier(0.05);
+    };
+    R_Date("OxA-33186", 4093, 35)
+    {
+     Outlier(0.05);
+    };
+   };
+   Boundary("=Khufu");
+  };
+  Sequence("Extra Dates 4 Mpt II-Sen I")
+  {
+   Boundary("=Mentuhotep II");
+   Phase("Late 11th")
+   {
+    R_Date("19543", 3715, 25)
+    {
+     Outlier(0.05);
+    };
+   };
+   Boundary("=Amenemhat I");
+   Phase("Early 12th")
+   {
+    R_Combine("Early 12th Combine 1", 8)
+    {
+     R_Date("16838", 3620, 32);
+     R_Date("VERA-4075", 3679, 29);
+     Outlier(0.05);
+    };
+   };
+   Boundary("=Amenemhat II");
+  };
+  Sequence("Extra Dates 5 Queen of Sen I")
+  {
+   Boundary("=Senusret I");
+   Phase("Queen of Sen I")
+   {
+    R_Date("20479", 3498, 32)
+    {
+     Outlier(0.05);
+    };
+   };
+   Boundary("=Amenemhat III");
+  };
+  Sequence("Extra Dates 6 12th")
+  {
+   Boundary("=Amenemhat I");
+   Phase("12th")
+   {
+    R_Date("18502", 3518, 28)
+    {
+     Outlier(0.05);
+    };
+   };
+   Boundary("=Wegaf");
+  };
+  Sequence("Extra Dates 7 12th/13th Boundary")
+  {
+   Boundary("=Queen Sobekneferu");
+   Phase("Sbk-Weg (13th)")
+   {
+    R_Date("20014", 3469, 27)
+    {
+     Outlier(0.05);
+    };
+   };
+   Boundary("=Sobekhotep II");
+  };
+  Sequence("OK")
+  {
+   Boundary("Khasekhemwy");
+   Boundary("Djoser");
+   Phase("Dsr")
+   {
+    R_Date("18052", 2421, 28)
+    {
+     Outlier(0.05);
+    };
+    R_Date("19793", 3313, 27)
+    {
+     Outlier(0.05);
+    };
+    R_Combine("Djoser Combine 1", 8)
+    {
+     R_Date("20767", 4081, 29);
+     R_Date("20768", 4172, 28);
+     R_Date("20736", 4115, 32);
+     Outlier(0.05);
+    };
+    Interval("Dsr Int", 19 + 5*T(5));
+   };
+   Boundary("Sekhemkhet");
+   Phase("Late 3rd")
+   {
+    Interval("Late 3rd Int", 35 + 2*5*T(5));
+   };
+   Boundary("Sneferu");
+   Phase("Snf")
+   {
+    R_Date("18514", 4091, 29)
+    {
+     Outlier(0.05);
+    };
+    R_Date("19141", 4140, 31)
+    {
+     Outlier(0.05);
+    };
+    Interval("Snf Int", 24 + 5*T(5));
+   };
+   Boundary("Khufu");
+   Phase("Khu")
+   {
+    Interval("Khu Int", 23 + 5*T(5));
+   };
+   Boundary("Djedefra");
+   Phase("Dje")
+   {
+    Interval("Dje + Bik Int", 8 + 5*T(5));
+   };
+   Boundary("Khafra");
+   Phase("Kha")
+   {
+    Interval("Kha Int", 26 + 5*T(5));
+   };
+   Boundary("Menkaura");
+   Phase("Men")
+   {
+    Interval("Men Int", 29 + 5*T(5));
+   };
+   Boundary("Shepseskaf");
+   Phase("She")
+   {
+    Interval("She + Hiatus Int", 9 + 5*T(5));
+   };
+   Boundary("Userkaf");
+   Phase("Hiatus + Use")
+   {
+    Interval("Use Int", 7 + 5*T(5));
+   };
+   Boundary("Sahura");
+   Phase("Sah")
+   {
+    Interval("Sah Int", 12 + 5*T(5));
+   };
+   Boundary("Neferirkara");
+   Phase("Nef")
+   {
+    R_Date("OxA-30539", 4010, 60)
+    {
+     Outlier(0.05);
+    };
+    Interval("Nef Int", 20 + 5*T(5));
+   };
+   Boundary("Shepseskara");
+   Phase("Mid 5th")
+   {
+    Interval("Mid 5th Int", 41 + 2*5*T(5));
+   };
+   Boundary("Djedekara");
+   Phase("Ddk")
+   {
+    R_Date("20212", 3911, 31)
+    {
+     Outlier(0.05);
+    };
+    Interval("Ddk Int", 39 + 5*T(5));
+   };
+   Boundary("Unas");
+   Phase("Una")
+   {
+    R_Date("OxA-X-2555-51", 3980, 120)
+    {
+     Outlier(0.05);
+    };
+    Interval("Una Int", 30 + 5*T(5));
+   };
+   Boundary("Teti");
+   Phase("Tet")
+   {
+    Interval("Tet Int", 22 + 5*T(5));
+   };
+   Boundary("Userkara");
+   Phase("Usr")
+   {
+    Interval("Usr Int", 2 + 5*T(5));
+   };
+   Boundary("Pepy I");
+   Phase("Pep I")
+   {
+    R_Date("18553", 3979, 29)
+    {
+     Outlier(0.05);
+    };
+    R_Date("YENI OxA-30211", 3956, 32)
+    {
+     Outlier(0.05);
+    };
+    Interval("Pep I Int", 34 + 5*T(5));
+   };
+   Boundary("Merenra");
+   Phase("Mer")
+   {
+    R_Date("OxA-30028", 3968, 31)
+    {
+     Outlier(0.05);
+    };
+    Interval("Mer Int", 9 + 5*T(5));
+   };
+   Boundary("PepyII");
+   Phase("Late 6th Dynasty")
+   {
+    Interval("Late 6th Dynasty Int", 97 + 1.41*5*T(5));
+   };
+   Boundary("Start 7th Dynasty");
+   Phase("7th-8th")
+   {
+    R_Date("18063", 3562, 29)
+    {
+     Outlier(0.05);
+    };
+    Interval("7th-8th Int", 21 + 5*T(5));
+   };
+   Boundary("Start 1IP");
+  };
+  Sequence("MK")
+  {
+   Boundary("Mentuhotep II");
+   Phase("Mtp II")
+   {
+    R_Combine("Mtp Combine 1", 8)
+    {
+     R_Date("18055", 3625, 29);
+     R_Date("18058", 3573, 30);
+     Outlier(0.05);
+    };
+    R_Combine("Mtp Combine 2", 8)
+    {
+     R_Date("18056", 3616, 29);
+     R_Date("18059", 3561, 30);
+     Outlier(0.05);
+    };
+    R_Combine("Mtp Combine 3", 8)
+    {
+     R_Date("18413", 3660, 29);
+     R_Date("18414", 3668, 28);
+     Outlier(0.05);
+    };
+    R_Date("18415", 3734, 30)
+    {
+     Outlier(0.05);
+    };
+    R_Date("20179", 3583, 30)
+    {
+     Outlier(0.05);
+    };
+    R_Date("20017", 3651, 28)
+    {
+     Outlier(0.05);
+    };
+    Interval("Mtp II Int", 51 + 3*T(5));
+   };
+   Boundary("Mentuhotep III");
+   Phase("Mtp III")
+   {
+    Interval("Mtp III Int", 12 + 3*T(5));
+   };
+   Boundary("Mentuhotep IV");
+   Phase("Mtp IV")
+   {
+    Interval("Mtp IV Int", 7 + 3*T(5));
+   };
+   Boundary("Amenemhat I");
+   Phase("Amn I")
+   {
+    R_Combine("Amn Combine 1", 8)
+    {
+     R_Date("19551", 3656, 27);
+     R_Date("19552", 3623, 27);
+     Outlier(0.05);
+    };
+    R_Combine("Amn Combine 2", 8)
+    {
+     R_Date("19553", 3277, 26);
+     R_Date("20019", 3236, 27);
+     Outlier(0.05);
+    };
+    Interval("Amn I Int", 29 + 3*T(5));
+   };
+   Boundary("Senusret I");
+   Phase("Sen I")
+   {
+    R_Date("20307", 3652, 28)
+    {
+     Outlier(0.05);
+    };
+    Interval("Sen I Int", 45 + 3*T(5));
+   };
+   Boundary("Amenemhat II");
+   Phase("Amn II")
+   {
+    Interval("Amn II Int", 34 + 3*T(5));
+   };
+   Boundary("Senusret II");
+   Phase("Sen II")
+   {
+    R_Date("20308", 3557, 28)
+    {
+     Outlier(0.05);
+    };
+    R_Date("20200", 3546, 27)
+    {
+     Outlier(0.05);
+    };
+    Interval("Sen II Int", 7 + 3*T(5));
+   };
+   Boundary("Senusret III");
+   Phase(Sen III)
+   {
+    Sequence("Papyri Sequence")
+    {
+     Boundary("Y5");
+     Phase("YR5")
+     {
+      R_Combine("Sen III Combine 1", 8)
+      {
+       R_Date("15313", 3503, 30);
+       R_Date("VERA-3726", 3543, 29);
+       Outlier(0.05);
+      };
+      R_Combine("Sen III Combine 2", 8)
+      {
+       R_Date("15317", 3532, 31);
+       R_Date("VERA-3730", 3529, 29);
+       Outlier(0.05);
+      };
+      R_Combine("Sen III Combine 3", 8)
+      {
+       R_Date("15318", 3518, 31);
+       R_Date("VERA-3731", 3513, 29);
+       Outlier(0.05);
+      };
+     };
+     Boundary("Y7");
+     Phase("YR7")
+     {
+      R_Combine("Illahun",8)
+      {
+       R_Date("OxA-23170", 3520, 28);
+       R_Date("OxA-23171", 3508, 27);
+       Outlier(0.05);
+      };
+     };
+     Boundary("Y14");
+     Phase("YR14")
+     {
+      R_Combine("Sen III Combine 4", 8)
+      {
+       R_Date("15315", 3513, 31);
+       R_Date("VERA-3728", 3565, 29);
+       Outlier(0.05);
+      };
+      R_Date("15311", 3532, 31)
+      {
+       Outlier(0.05);
+      };
+      R_Date("VERA-3732", 3563, 29)
+      {
+       Outlier(0.05);
+      };
+     };
+     Boundary("Y15");
+    };
+    Date(Prior("Bark Edge_1_GrM22702", Bark_Edge_1_GrM22702.prior););
+    Date(Prior("Bark Edge_2_GrM24029", Bark_Edge_2_GrM24029.prior););
+    Date(Prior("Uronarti_Foundation",Uronarti_Foundation.prior););
+    After("Funerary Boat")
+    {
+     Date(Prior("Felling_Date_BOAT",Felling_Date_BOAT.prior););
+    };
+    Interval("Sen III Int", 39 + 3*T(5));
+   };
+   Boundary("Amenemhat III");
+   Phase("Amn III")
+   {
+    Sequence()
+    {
+     Boundary("Y4");
+     Phase("YR4")
+     {
+      R_Combine("Amn III Combine 1", 8)
+      {
+       R_Date("15316", 3542, 30);
+       R_Date("VERA-3729", 3563, 29);
+       Outlier(0.05);
+      };
+      R_Date("15310", 3560, 33)
+      {
+       Outlier(0.05);
+      };
+      R_Date("VERA-3733", 3568, 28)
+      {
+       Outlier(0.05);
+      };
+     };
+     Boundary("Y37");
+     Phase("YR37")
+     {
+      R_Date("VERA-3734", 3512, 29)
+      {
+       Outlier(0.05);
+      };
+      R_Date("15309", 3626, 33)
+      {
+       Outlier(0.05);
+      };
+     };
+     Boundary("Y38");
+     Phase("YR38")
+     {
+      R_Date("15312", 3485, 31)
+      {
+       Outlier(0.05);
+      };
+     };
+     Boundary("Y40");
+     Phase("YR40")
+     {
+      R_Date("VERA-3735", 3550, 29)
+      {
+       Outlier(0.05);
+      };
+     };
+     Boundary("Y41");
+    };
+    R_Date("20016", 3556, 28)
+    {
+     Outlier(0.05);
+    };
+    R_Date("20480", 3489, 34)
+    {
+     Outlier(0.05);
+    };
+    Interval("Amn III Int", 45 + 3*T(5));
+   };
+   Boundary("Amenemhat IV");
+   Phase("Amn IV")
+   {
+    Interval("Amn IV Int", 9 + 3*T(5));
+   };
+   Boundary("Queen Sobekneferu");
+   Phase("QSo")
+   {
+    Interval("Qso Int", 4 + 3*T(5));
+   };
+   Boundary("Wegaf");
+   Boundary("Sobekhotep II");
+  };
+  Difference("Duration of 1IP", "Mentuhotep II", "Start 1IP");
+ };
