@@ -1,11 +1,11 @@
-Options()
+ Options()
  {
   Resolution=1;
  };
  Plot()
  {
   Outlier_Model("General",T(5),U(0,4),"t");
-  Sequence("Beam FK-001-01 Sequence")
+  Sequence("Uronarti Beam FK-001-01 Sequence")
   {
    Boundary("Start");
    R_Date("GrM-22715",3538,19)
@@ -24,11 +24,11 @@ Options()
    {
     Outlier(0.05);
    };
-   R_Combine("PNR F", 8)
+   R_Combine("Duplicate", 8)
    {
-    Outlier(0.05);
     R_Date("GrM-22708",3568,19);
     R_Date("GrM-22709",3570,19);
+    Outlier(0.05);
    };
    R_Date("GrM-22707",3533,19)
    {
@@ -53,3 +53,4 @@ Options()
    Boundary("End");
   };
  };
+
