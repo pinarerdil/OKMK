@@ -1,18 +1,18 @@
-Options()
+ Options()
  {
   Resolution=1;
  };
  Plot()
  {
   Outlier_Model("General",T(5),U(0,4),"t");
-  Sequence("Beam FJ-001-04 Sequence")
+  Sequence("Uronarti Beam FJ-001-04 Sequence")
   {
    Boundary("Start");
    R_Date("GrM-24032",3564,23)
    {
     Outlier(0.05);
    };
-   R_Combine("PNR P", 8)
+   R_Combine("Duplicate", 8)
    {
     R_Date("GrM-24042",3600,38);
     R_Date("GrM-24031",3560,19);
@@ -30,11 +30,12 @@ Options()
    {
     Outlier(0.05);
    };
-   R_Date("Bark Edge 2 GrM24029",3558,20)
+   R_Date("Bark Edge 2 GrM-24029",3558,20)
    {
     Outlier(0.05);
    };
    Boundary("End");
   };
  };
+
 
