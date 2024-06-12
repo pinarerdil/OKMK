@@ -1,4 +1,4 @@
-Options()
+ Options()
  {
   Resolution=1;
   kIterations=100;
@@ -294,9 +294,34 @@ Options()
     Interval("Mer Int", 9 + 5*T(5));
    };
    Boundary("PepyII");
-   Phase("Late 6th Dynasty")
+   Phase("Pep II")
    {
-    Interval("Late 6th Dynasty Int", 97 + 1.41*5*T(5));
+    R_Date("IFAO_0928",3832,30)
+    {
+     Outlier(0.05);
+    };
+    R_Date("IFAO_0929",3823,30)
+    {
+     Outlier(0.05);
+    };
+    R_Date("IFAO_0930",3945,30)
+    {
+     Outlier(0.05);
+    };
+    R_Date("IFAO_0931",3829,30)
+    {
+     Outlier(0.05);
+    };
+    R_Date("IFAO_0932",3870,30)
+    {
+     Outlier(0.05);
+    };
+    Interval("Pep II Int", 94 + 5*T(5));
+   };
+   Boundary("Late 6th Dynasty");
+   Phase("Late 6th")
+   {
+    Interval("Late 6th Dynasty Int", 3 + 5*T(5));
    };
    Boundary("Start 7th Dynasty");
    Phase("7th-8th")
@@ -403,7 +428,7 @@ Options()
    Boundary("Senusret III");
    Phase(Sen III)
    {
-    Sequence("Papyri Sequence")
+    Sequence("Papyri Sequence Sen III")
     {
      Boundary("Y5");
      Phase("YR5")
@@ -457,8 +482,8 @@ Options()
      };
      Boundary("Y15");
     };
-    Date(Prior("Bark Edge_1_GrM22702", Bark_Edge_1_GrM22702.prior););
-    Date(Prior("Bark Edge_2_GrM24029", Bark_Edge_2_GrM24029.prior););
+    Date(Prior("Bark_Edge_1_GrM_22702",Bark_Edge_1_GrM_22702.prior););
+    Date(Prior("Bark_Edge_2_GrM_24029",Bark_Edge_2_GrM_24029.prior););
     Date(Prior("Uronarti_Foundation",Uronarti_Foundation.prior););
     After("Funerary Boat")
     {
@@ -469,7 +494,7 @@ Options()
    Boundary("Amenemhat III");
    Phase("Amn III")
    {
-    Sequence()
+    Sequence("Papyri Sequence Amn III")
     {
      Boundary("Y4");
      Phase("YR4")
