@@ -30,7 +30,7 @@
    {
     Outlier(0.05);
    };
-   R_Date("Bark Edge 2 GrM-24029",3558,20)
+   R_Date("Bark Edge 2 GrM 24029",3558,20)
    {
     Outlier(0.05);
    };
